@@ -1,0 +1,22 @@
+#:kivy 2.2.1
+<TheLayout>
+    submit: submit
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        spacing: 20
+        padding: 50
+        Label:
+            id: label
+            text: "Номер: "
+            font_size: 32
+        TextInput: 
+            id: number
+            input_filter: 'int'
+            multiline: False
+        Button:
+            id: submit
+            text: 'Начать'
+            on_press: root.submit_press()
+            
+
